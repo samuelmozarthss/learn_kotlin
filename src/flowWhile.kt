@@ -12,5 +12,11 @@ fun main() {
         if (index == 50) {
             break
         }
-   }
+    }
+
+    var l: Int = 10
+    do {
+        println(l)
+        l += 5
+    } while (l <= 100)
 }
