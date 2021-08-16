@@ -2,6 +2,20 @@ fun calculaBonus1(a: Int, b: Int, c: Int) {
     println("O bônus é de: ${a + b * c}")
 }
 
+fun calculaBonus3(cargo: String, salario: Float): Float {
+
+    val bonus: Float
+//    Gerente Junior, Gerente Senior, Coordenador
+    if (cargo == "Coordenador") {
+        return salario * 0.2f
+    } else if (cargo == "Gerente Junior") {
+        bonus = salario * 0.5f
+    } else {
+        bonus = salario * 2
+    }
+    return bonus
+}
+
 // if - else
 fun maiorDeIdade(idade: Int) {
     if (idade >= 18) {
@@ -25,5 +39,9 @@ fun main() {
     maiorDeIdade1(10)
     maiorDeIdade1(18)
     maiorDeIdade1(27)
+
+    println(calculaBonus3("Coordenador", salario = 1000f))
+    println(calculaBonus3("Gerente Junior", salario = 1000f))
+    println(calculaBonus3("Gerente Senior", salario = 1000f))
 
 }
