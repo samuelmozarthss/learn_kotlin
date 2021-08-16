@@ -39,6 +39,12 @@ fun main() {
     maiorDeIdade1(18)
     maiorDeIdade1(27)
 
+//    Operador Elvis ?:
+    val test: Int? = null
+    val op: Int = test ?: 100
+    println(op)
+//    NullPointerException - > erro recorrente em java da qual o valor não pode ser nulo
+
     println(calculaBonus3("Coordenador", salario = 1000f))
     println(calculaBonus3("Gerente Junior", salario = 1000f))
     println(calculaBonus3("Gerente Senior", salario = 1000f))
