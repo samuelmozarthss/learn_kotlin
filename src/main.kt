@@ -17,6 +17,8 @@ fun endereco (rua: String = "") {
     
 }
 
+// T é usado em conveção pra informar que o tipo é Generico
+
 fun <T> media (vararg valores: T) {
     for (valor in valores) {
         println(valor)
@@ -26,12 +28,14 @@ fun <T> media (vararg valores: T) {
 fun main() {
 
     media(8f, 9f)
-    media(1f,9f, 8f, 9f)
+    media(1f,1, 8.8, 9f)
 
     val str = "SamuelGostoso"
     str.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
     str.contains("bla")
     str.startsWith("S")
     str.startsWith("s")
+
+    arrayOf(1,2,3,4,5)
 
 }
