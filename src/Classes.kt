@@ -1,42 +1,51 @@
-class Pessoa1
+/*
+class Maquina (var marca: String)
 
-class Pessoa2 (var nome: String, var anoNascimento: Int)
 
-class Pessoa3 (var nome: String) {
 
-//    Se a variavel do construtor não for criada, ela não será visivel na chamada de valor
-//       V
-    var ano: Int? = null
+fun main() {
+ val p: Pessoa = Pessoa()
+    p.nome
 
-    constructor(nome: String, ano: Int) : this(nome) {
-        this.ano = ano
+}*/
+
+class Maquina (var marca: String) {
+
+    var nucleos: Int = 0
+    get() {
+        println("Get foi chamado")
+        return field
+    }
+    set(value) {
+        println("Sett foi chamado")
+        field = value
     }
 
-    fun  saudacao() {
-        println("Olá, meu nome é $nome")
+    fun ligar() {
+
     }
+    fun processar() {
+
+    }
+    fun desligar() {
+
+    }
+
 }
 
 fun main() {
+    var m = Maquina("xpto")
+//    println(m.nucleos)
+//    m.nucleos = 10
 
-//    Trexo de codigo que é chamado quando a classe é instanciada
-
-
-
-//             Aqui está instanciando o objeto
-//                           V
-    val p1: Pessoa3 = Pessoa3("Samuel", 1997)
-    val p2: Pessoa3 = Pessoa3("Samuel")
-
-
-    println(p1.nome)
-    println(p1.ano)
-
-    p1.saudacao()
-
-    println(p2.nome)
-    println(p2.ano)
-
-    p2.saudacao()
+    with(m){
+        ligar()
+        processar()
+        desligar()
+    }
+    m.ligar()
+    m.processar()
+    m.desligar()
 
 }
+

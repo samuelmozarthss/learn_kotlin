@@ -1,10 +1,19 @@
 public class Pessoa {
 
-    Pessoa(String nome, int ano) {
+    private String nome;
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public static void main(String[] args) {
-        Pessoa p = new Pessoa("Samuel", 1997);
+        Maquina m = new Maquina("xpto");
+        m.getMarca();
+        m.setMarca("teset");
     }
+
 }
