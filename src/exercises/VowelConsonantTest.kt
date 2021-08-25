@@ -19,4 +19,8 @@ class VowelConsonantTest {
         Assert.assertEquals(19, countConsonants(phrase))
     }
 
+    @Test fun countVowelsFilter() {
+        Assert.assertEquals(8,countVowelsFilter("Minha frase com vogais!"))
+    }
+
 }
